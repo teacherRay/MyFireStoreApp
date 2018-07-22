@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "418179226183",
+    "firebase_url": "https://myfirestoreapp-75247.firebaseio.com",
+    "project_id": "myfirestoreapp-75247",
+    "storage_bucket": "myfirestoreapp-75247.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418179226183:android:8ba07bf637f869c8",
+        "android_client_info": {
+          "package_name": "com.camboray.myfirestoreapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418179226183-cknas8rd8mr4a6mmhdt70nke1hu8nu07.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.camboray.myfirestoreapp",
+            "certificate_hash": "86af7178155e56cdb78926f961cea245fe62ccee"
+          }
+        },
+        {
+          "client_id": "418179226183-lmr4d9s0qebfje5r39jsan4rludeobk8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCssaduKxMXRxBE2wosUZj0EePsjL3JMyk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418179226183-lmr4d9s0qebfje5r39jsan4rludeobk8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
