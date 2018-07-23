@@ -24,9 +24,11 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     private static final String KEY_TITLE = "title";
+    private static final String KEY_AUTHOR = "author";
     private static final String KEY_DESCRIPTION = "description";
 
     private EditText editTextTitle;
+    private EditText editTextAuthor;
     private EditText editTextDescription;
     private TextView textViewData;
 
@@ -38,16 +40,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         editTextTitle = findViewById(R.id.edit_text_title);
+        editTextAuthor = findViewById(R.id.edit_text_author);
         editTextDescription = findViewById(R.id.edit_text_description);
         textViewData = findViewById(R.id.text_view_data);
     }
 
     public void saveNote(View v) {
         String title = editTextTitle.getText().toString();
+        String author = editTextAuthor.getText().toString();
         String description = editTextDescription.getText().toString();
 
         Map<String, Object> note = new HashMap<>();
         note.put(KEY_TITLE, title);
+        note.put(KEY_AUTHOR, author);
         note.put(KEY_DESCRIPTION, description);
 
         noteRef.set(note)
@@ -73,8 +78,9 @@ public class MainActivity extends AppCompatActivity {
                 public void onSuccess(DocumentSnapshot documentSnapshot){
                     if (documentSnapshot.exists()){
                         String title=documentSnapshot.getString(KEY_TITLE);
+                        String author = documentSnapshot.getString(KEY_AUTHOR);
                         String description=documentSnapshot.getString(KEY_DESCRIPTION);
-                        textViewData.setText("Title: " + title + "\n" + "Description: " + description);
+                        textViewData.setText("Title: " + title + "\n" + "Author: " + author + "\n" + "Description: " + description);
                         Toast.makeText(MainActivity.this, "Note Found", Toast.LENGTH_SHORT).show();
                     }else {
                         Toast.makeText(MainActivity.this, "Document Not Found", Toast.LENGTH_SHORT).show();
