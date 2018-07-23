@@ -9,19 +9,16 @@ import android.widget.TextView
 import android.widget.Toast
 
 import com.google.firebase.firestore.FirebaseFirestore
-
-import org.w3c.dom.Text
-
 import java.util.HashMap
 
 class MainActivity : AppCompatActivity() {
 
-    private var editTextTitle: EditText? = null
-    private var editTextDescription: EditText? = null
-    private var textViewData: TextView? = null
+    var editTextTitle: EditText? = null
+    var editTextDescription: EditText? = null
+    var textViewData: TextView? = null
 
-    private val db = FirebaseFirestore.getInstance()
-    private val noteRef = db.document("Notebook/My First Note")
+   val db = FirebaseFirestore.getInstance()
+   val noteRef = db.document("Notebook/My First Note")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -65,9 +62,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        private val TAG = "MainActivity"
-
-        private val KEY_TITLE = "title"
-        private val KEY_DESCRIPTION = "description"
+      val TAG = "MainActivity"
+      val KEY_TITLE = "title"
+      val KEY_DESCRIPTION = "description"
     }
 }
